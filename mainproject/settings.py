@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-h_xvp@^y6kbt0kgbpo1#wt5y((!s$6p8lftersbo7@*@ko%q1_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["first-thing-production.up.railway.app", ]
+ALLOWED_HOSTS = ["first-thing-production.up.railway.app",
+                 "127.0.0.1",
+                  "Yasser.baydenevents.com"
+                   "http://127.0.0.1:8000/" ]
 
 
 # Application definition
@@ -38,9 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "mainapp2.apps.Mainapp2Config",
-    "tourismapp.apps.TourismappConfig"
-
+    "django.contrib.sites",
+    "django.contrib.sitemaps",
+    "tourismapp.apps.TourismappConfig",
 ]
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
